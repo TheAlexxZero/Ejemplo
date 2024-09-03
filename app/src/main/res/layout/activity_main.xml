@@ -8,12 +8,44 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/textView"
+        android:layout_width="240dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="432dp"
+        android:text="Bienvenido a Lotus"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/motivationalQuoteTextView"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:text="¡Comienza hoy a construir hábitos saludables y mejora tu bienestar!"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="446dp" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="446dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
