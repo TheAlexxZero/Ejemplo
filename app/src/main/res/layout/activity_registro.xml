@@ -16,9 +16,9 @@
         android:text="Crear Cuenta"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#FF00FF" <!-- Color neón rosa -->
-    android:layout_marginBottom="24dp"
-    android:fontFamily="sans-serif-medium" />
+        android:textColor="#FF00FF"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium" />
 
     <!-- Label y Campo de texto para el nombre -->
     <TextView
