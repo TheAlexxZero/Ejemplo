@@ -1,10 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarHabitos">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#2A0A3A">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tituloNuevoHabito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Nuevo Hábito"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextNombreHabito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Hábito"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewFrecuencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frecuencia"
+        android:textSize="18sp"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerFrecuencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewTipoHabito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Hábito"
+        android:textSize="18sp"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerTipoHabito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewTipoEspecifico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo Específico"
+        android:textSize="18sp"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerTipoEspecifico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewPlazo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plazo"
+        android:textSize="18sp"
+        android:textColor="#FF007F"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPlazo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioCortoPlazo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corto Plazo"
+            android:textColor="#FFFFFF"/>
+
+        <RadioButton
+            android:id="@+id/radioLargoPlazo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Largo Plazo"
+            android:textColor="#FFFFFF"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botonGuardarHabito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Hábito"
+        android:backgroundTint="#FF007F"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
