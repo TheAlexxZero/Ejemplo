@@ -1,26 +1,28 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center">
+    android:gravity="center"
+    tools:ignore="ExtraText">
     android:background="#1a1a1a" <!-- Fondo oscuro estilo synthwave -->
     tools:context=".Login">
 
     <!-- Logo de la app -->
+
+    <!-- Título de Iniciar Sesión -->
+
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo_login"
         android:layout_marginBottom="40dp"
-        android:contentDescription="Logo de la app"/>
+        android:contentDescription="Logo de la app"
+        android:src="@drawable/foto" />
 
-    <!-- Título de Iniciar Sesión -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -13,12 +13,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crear Cuenta"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#FF00FF"
         android:layout_marginBottom="24dp"
-        android:fontFamily="sans-serif-medium" />
+        android:fontFamily="sans-serif-medium"
+        android:text="Crear Cuenta"
+        android:textColor="#FF00FF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <!-- Label y Campo de texto para el nombre -->
     <TextView
@@ -35,10 +35,10 @@
         android:hint="Ingresa tu nombre"
         android:inputType="textPersonName"
         android:backgroundTint="#FF00FF"
-        android:hintTextColor="#FF80FF"
-        android:textColor="#FFFFFF"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp" />
+        android:textColorHint="#FF80FF"
+    android:textColor="#FFFFFF"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp" />
 
     <!-- Label y Campo de texto para el correo electrónico -->
     <TextView
@@ -55,10 +55,10 @@
         android:hint="Ingresa tu correo"
         android:inputType="textEmailAddress"
         android:backgroundTint="#FF00FF"
-        android:hintTextColor="#FF80FF"
-        android:textColor="#FFFFFF"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp" />
+        android:textColorHint="#FF80FF"
+         android:textColor="#FFFFFF"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp" />
 
     <!-- Label y Campo de texto para la contraseña -->
     <TextView
@@ -75,10 +75,10 @@
         android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
         android:backgroundTint="#FF00FF"
-        android:hintTextColor="#FF80FF"
-        android:textColor="#FFFFFF"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp" />
+        android:textColorHint="#FF80FF"
+    android:textColor="#FFFFFF"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp" />
 
     <!-- Label y Campo de texto para confirmar la contraseña -->
     <TextView
@@ -90,15 +90,15 @@
 
     <EditText
         android:id="@+id/etConfirmPassword"
-        android:layout_width="match_parent"
+        android:layout_width="367dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#FF00FF"
         android:hint="Repite tu contraseña"
         android:inputType="textPassword"
-        android:backgroundTint="#FF00FF"
-        android:hintTextColor="#FF80FF"
-        android:textColor="#FFFFFF"
         android:padding="16dp"
-        android:layout_marginBottom="24dp" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FF80FF" />
 
     <!-- Botón de Registrarse -->
     <Button
@@ -112,3 +112,4 @@
         android:textStyle="bold" />
 
 </LinearLayout>
+

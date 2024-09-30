@@ -29,15 +29,15 @@
         android:id="@+id/spinnerEliminarHabito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/spinner_background"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/botonEliminarHabito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eliminar Hábito"
         android:backgroundTint="#F44336"
-        android:textColor="#FFFFFF"/>
+        android:text="Eliminar Hábito"
+        android:textColor="#FFFFFF" />
 </LinearLayout>
