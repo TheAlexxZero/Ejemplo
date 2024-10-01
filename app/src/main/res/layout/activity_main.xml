@@ -49,6 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="goToLogin"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -63,7 +64,19 @@
         app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toEndOf="@+id/btnlogin"
         app:layout_constraintTop_toBottomOf="@+id/motivationalQuoteTextView"
+        android:onClick="goToRegistro"
         app:layout_constraintVertical_bias="0.004" />
+
+    <Button
+        android:id="@+id/btnPantalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="Pantalla"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="goToPantalla"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -11,6 +11,10 @@
     android:background="#1a1a1a" <!-- Fondo oscuro estilo synthwave -->
     tools:context=".Login">
 
+
+
+
+
     <!-- Logo de la app -->
 
     <!-- Título de Iniciar Sesión -->
