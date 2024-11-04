@@ -12,15 +12,16 @@
     tools:context=".Login">
 
     <!-- Logo de la app -->
+
+    <!-- Título de Iniciar Sesión -->
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/synthwave"
         android:layout_marginBottom="40dp"
-        android:contentDescription="Logo de la app"/>
+        android:contentDescription="Logo de la app"
+        android:src="@drawable/synthwave" />
 
-    <!-- Título de Iniciar Sesión -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
