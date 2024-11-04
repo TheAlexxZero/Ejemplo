@@ -1,14 +1,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center">
-    android:background="#1a1a1a" <!-- Fondo oscuro estilo synthwave -->
+    android:gravity="center"
+    android:background="#1a1a1a"
+    tools:ignore="ExtraText">
     tools:context=".Login">
 
     <!-- Logo de la app -->
@@ -16,7 +16,7 @@
         android:id="@+id/logoImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo_login"
+        android:src="@drawable/synthwave"
         android:layout_marginBottom="40dp"
         android:contentDescription="Logo de la app"/>
 

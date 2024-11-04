@@ -12,15 +12,15 @@
         android:id="@+id/textView"
         android:layout_width="270dp"
         android:layout_height="107dp"
-        android:layout_marginBottom="496dp"
         android:text="Bienvenido a Lotus"
         android:textColor="#FF00FF"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/motivationalQuoteTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="32dp" /> <!-- Añadido un margen para mejor separación -->
 
     <TextView
         android:id="@+id/motivationalQuoteTextView"
@@ -30,25 +30,29 @@
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="320dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnlogin"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" /> <!-- Añadidas restricciones para centrar -->
 
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btnSignup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="24dp" /> <!-- Añadidas restricciones y márgenes -->
 
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Signup"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnlogin"
+        android:layout_marginBottom="24dp" /> <!-- Añadidas restricciones y márgenes -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

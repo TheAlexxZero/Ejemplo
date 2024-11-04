@@ -28,10 +28,10 @@
     <Spinner
         android:id="@+id/spinnerEliminarHabito"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/spinner_background"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="211dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/synthwave"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/botonEliminarHabito"

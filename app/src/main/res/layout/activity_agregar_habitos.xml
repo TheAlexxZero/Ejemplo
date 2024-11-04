@@ -19,12 +19,11 @@
     <EditText
         android:id="@+id/editTextNombreHabito"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
         android:hint="Nombre del Hábito"
         android:padding="12dp"
-        android:background="@drawable/edit_text_background"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textViewFrecuencia"
@@ -38,10 +37,9 @@
     <Spinner
         android:id="@+id/spinnerFrecuencia"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/spinner_background"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="58dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textViewTipoHabito"
@@ -55,25 +53,25 @@
     <Spinner
         android:id="@+id/spinnerTipoHabito"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/spinner_background"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textViewTipoEspecifico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tipo Específico"
+        android:text="Especifica tu hábito"
         android:textSize="18sp"
         android:textColor="#FF007F"
         android:layout_marginBottom="8dp"/>
 
-    <Spinner
-        android:id="@+id/spinnerTipoEspecifico"
+    <EditText
+        android:id="@+id/editTextTipoEspecifico"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/spinner_background"
+        android:hint="Ej: Hacer ejercicio todos los días"
+        android:padding="12dp"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
 
