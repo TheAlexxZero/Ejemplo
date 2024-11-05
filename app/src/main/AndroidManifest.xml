@@ -39,7 +39,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".videoActivity"></activity>
+        <activity android:name=".videoActivity"
+            android:screenOrientation="sensor">
+        </activity>
+
+        <activity
+            android:name=".EditarHabito"
+            android:exported="true" />
 
     </application>
 

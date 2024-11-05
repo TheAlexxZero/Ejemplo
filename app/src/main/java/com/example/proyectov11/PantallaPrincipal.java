@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class PantallaPrincipal extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -22,7 +23,7 @@ public class PantallaPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_pantalla_principal);
+        setContentView(R.layout.activity_pantalla);
 
         // Inicializa el RecyclerView
         recyclerView = findViewById(R.id.recyclerViewHabitos);
@@ -47,6 +48,26 @@ public class PantallaPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PantallaPrincipal.this, EliminarHabitos.class);
+                startActivity(intent);
+            }
+        });
+
+        //configurar el boton de la ventana flotante
+        FloatingActionButton fabVerVideo = findViewById(R.id.fab_ver_video);
+        fabVerVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PantallaPrincipal.this, videoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //configurar el boton editar
+        Button botonEditar = findViewById(R.id.botoneditar);
+        botonEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PantallaPrincipal.this, EditarHabito.class);
                 startActivity(intent);
             }
         });

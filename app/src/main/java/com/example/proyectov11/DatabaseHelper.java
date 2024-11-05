@@ -114,5 +114,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return result > 0; // Retorna true si se eliminó correctamente
     }
+
+    public boolean actualizarHabit(int id, String nuevoNombre, String nuevaFrecuencia) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nombre_habito", nuevoNombre);
+        contentValues.put("frecuencia_habito", nuevaFrecuencia);
+
+        // Actualiza el registro en la base de datos
+        return db.update("habitos", contentValues, "id_habito = ?", new String[]{String.valueOf(id)}) > 0;
+    }
+    // Método para obtener un hábito por su ID
+    public Cursor getHabitById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.query(TABLE_HABITS, null, COLUMN_HABIT_ID + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+    }
+
+
 }
 
