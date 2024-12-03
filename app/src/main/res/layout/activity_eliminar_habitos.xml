@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Eliminar Hábito"
-        android:textSize="28sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#BB86FC"
         android:layout_marginBottom="24dp"
@@ -28,8 +28,8 @@
 
     <Spinner
         android:id="@+id/spinnerEliminarHabito"
-        android:layout_width="373dp"
-        android:layout_height="69dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginBottom="24dp"
         android:padding="12dp"
         android:textColor="#FFFFFF" />
@@ -43,6 +43,7 @@
         android:textStyle="bold"
         android:backgroundTint="#F44336"
         android:textColor="#FFFFFF"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

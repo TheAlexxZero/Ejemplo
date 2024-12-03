@@ -75,7 +75,7 @@ public class PantallaPrincipal extends AppCompatActivity {
 
     private void loadHabits() {
         DatabaseHelper db = new DatabaseHelper(this);
-        Cursor cursor = db.getAllHabits();
+        Cursor cursor = db.getAllSleepHabits();
 
         // Configura el adaptador con el cursor
         habitAdapter = new HabitAdapter(this, cursor);

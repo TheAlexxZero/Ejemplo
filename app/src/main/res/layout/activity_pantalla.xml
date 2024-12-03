@@ -9,111 +9,112 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
-
-<!-- Título -->
-<TextView
-    android:id="@+id/titulo"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="24dp"
-    android:text="Mis Hábitos"
-    android:textSize="28sp"
-    android:textStyle="bold"
-    android:textColor="#BB86FC"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
-<!-- RecyclerView -->
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerViewHabitos"
-    android:layout_width="0dp"
-    android:layout_height="250dp"
-    android:layout_marginBottom="24dp"
-    android:background="#2A2A3E"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/titulo" />
-
-<!-- Gráfico -->
-<LinearLayout
-    android:id="@+id/grafico"
-    android:layout_width="0dp"
-    android:layout_height="200dp"
-    android:layout_marginBottom="24dp"
-    android:orientation="vertical"
-    android:background="#2A2A3E"
-    android:padding="16dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/recyclerViewHabitos">
-
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Visualización de hábitos"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:gravity="center"
-        android:textColor="#FFFFFF" />
-</LinearLayout>
+        android:layout_height="wrap_content">
 
-<!-- Botón Agregar Hábito -->
-<Button
-    android:id="@+id/botonAgregar"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    android:text="Agregar Hábito"
-    android:textStyle="bold"
-    android:backgroundTint="#6200EE"
-    android:textColor="#FFFFFF"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/grafico" />
+        <!-- Título -->
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Mis Hábitos"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#BB86FC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!-- Botón Eliminar Hábito -->
-<Button
-    android:id="@+id/botonEliminar"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    android:text="Eliminar Hábito"
-    android:textStyle="bold"
-    android:backgroundTint="#3700B3"
-    android:textColor="#FFFFFF"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/botonAgregar" />
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHabitos"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="24dp"
+            android:background="#2A2A3E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo" />
 
-<!-- Botón Editar Hábito -->
-<Button
-    android:id="@+id/botoneditar"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="32dp"
-    android:text="Editar Hábito"
-    android:textStyle="bold"
-    android:backgroundTint="#BB86FC"
-    android:textColor="#FFFFFF"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/botonEliminar" />
+        <!-- Gráfico -->
+        <LinearLayout
+            android:id="@+id/grafico"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            android:background="#2A2A3E"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewHabitos">
 
-<!-- Floating Action Button -->
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/fab_ver_video"
-    android:layout_width="56dp"
-    android:layout_height="56dp"
-    android:layout_margin="16dp"
-    android:src="@drawable/synthwave"
-    android:tint="#FFFFFF"
-    app:backgroundTint="#6200EE"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Visualización de hábitos"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+        <!-- Botón Agregar Hábito -->
+        <Button
+            android:id="@+id/botonAgregar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Agregar Hábito"
+            android:textStyle="bold"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/grafico" />
+
+        <!-- Botón Eliminar Hábito -->
+        <Button
+            android:id="@+id/botonEliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Eliminar Hábito"
+            android:textStyle="bold"
+            android:backgroundTint="#3700B3"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botonAgregar" />
+
+        <!-- Botón Editar Hábito -->
+        <Button
+            android:id="@+id/botoneditar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#BB86FC"
+            android:text="Editar Hábito"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botonEliminar" />
+
+        <!-- Floating Action Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_ver_video"
+            android:layout_width="58dp"
+            android:layout_height="37dp"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="28dp"
+            android:src="@drawable/synthwave"
+            android:tint="#FFFFFF"
+            app:backgroundTint="#6200EE"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
