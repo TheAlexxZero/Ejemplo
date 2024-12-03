@@ -1,6 +1,21 @@
 <resources>
+    <!-- Nombre de la aplicación -->
     <string name="app_name">ProyectoV1.1</string>
     <string name="login">Login</string>
+
+    <!-- Título para la creación de un nuevo hábito de sueño -->
+    <string name="crear_nuevo_habito">Crear Nuevo Hábito de Sueño</string>
+
+    <!-- Textos de los campos -->
+    <string name="nombre_habito">Nombre del Hábito</string>
+    <string name="hora_dormir">Hora de Dormir</string>
+    <string name="hora_despertar">Hora de Despertar</string>
+    <string name="frecuencia">Frecuencia</string>
+    <string name="tipo_habito">Tipo de Hábito</string>
+    <string name="tipo_especifico">Especifica tu Hábito</string>
+    <string name="plazo">Plazo</string>
+
+    <!-- Array de frecuencias -->
     <string-array name="frecuencias_array">
         <item>7 días</item>
         <item>1 mes</item>
@@ -8,10 +23,23 @@
         <item>1 año</item>
     </string-array>
 
+    <!-- Array de tipos de hábitos relacionados con el descanso -->
     <string-array name="tipos_habito_array">
-        <item>Financiero</item>
-        <item>Salud</item>
-        <item>Hobby</item>
-        <item>Productividad</item>
+        <item>Descanso</item>
+        <item>Sueño profundo</item>
+        <item>Relax</item>
+        <item>Respiración profunda</item>
     </string-array>
+
+    <!-- Array de plazos -->
+    <string-array name="plazos_array">
+        <item>Corto Plazo</item>
+        <item>Largo Plazo</item>
+    </string-array>
+
+    <!-- Mensajes y alertas -->
+    <string name="mensaje_guardado_exitoso">Hábito de sueño guardado exitosamente</string>
+    <string name="mensaje_error_guardado">Error al guardar el hábito de sueño</string>
+    <string name="completar_campos">Por favor, completa todos los campos.</string>
+
 </resources>

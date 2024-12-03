@@ -8,25 +8,26 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    // Nombre y versión de la base de datos
     private static final String DATABASE_NAME = "habitapp.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2; // Incrementamos la versión
 
-    // Nombre de la tabla y columnas de usuarios
+    // Tabla de usuarios
     private static final String TABLE_USERS = "users";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "nombre";
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_PASSWORD = "password";
 
-    // Nombre de la tabla y columnas de hábitos
-    private static final String TABLE_HABITS = "habits";
-    private static final String COLUMN_HABIT_ID = "id";
-    private static final String COLUMN_HABIT_NAME = "nombre_habito";
-    private static final String COLUMN_HABIT_FREQUENCY = "frecuencia";
-    private static final String COLUMN_HABIT_TYPE = "tipo_habito";
-    private static final String COLUMN_HABIT_SPECIFIC_TYPE = "tipo_especifico";
-    private static final String COLUMN_HABIT_TERM = "plazo";
+    // Tabla de hábitos de sueño
+    private static final String TABLE_SLEEP_HABITS = "sleep_habits";
+    private static final String COLUMN_SLEEP_ID = "id";
+    static final String COLUMN_SLEEP_NAME = "nombre_habito";
+    private static final String COLUMN_SLEEP_TIME_TO_SLEEP = "hora_dormir";
+    private static final String COLUMN_SLEEP_TIME_TO_WAKE = "hora_despertar";
+    private static final String COLUMN_SLEEP_FREQUENCY = "frecuencia";
+    private static final String COLUMN_SLEEP_TYPE = "tipo_habito";
+    private static final String COLUMN_SLEEP_SPECIFIC_TYPE = "tipo_especifico";
+    private static final String COLUMN_SLEEP_TERM = "plazo";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -42,24 +43,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_PASSWORD + " TEXT" + ")";
         db.execSQL(CREATE_USERS_TABLE);
 
-        // Crear la tabla de hábitos
-        String CREATE_HABITS_TABLE = "CREATE TABLE " + TABLE_HABITS + "("
-                + COLUMN_HABIT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + COLUMN_HABIT_NAME + " TEXT,"
-                + COLUMN_HABIT_FREQUENCY + " TEXT,"
-                + COLUMN_HABIT_TYPE + " TEXT,"
-                + COLUMN_HABIT_SPECIFIC_TYPE + " TEXT,"
-                + COLUMN_HABIT_TERM + " TEXT" + ")";
-        db.execSQL(CREATE_HABITS_TABLE);
+        // Crear la tabla de hábitos de sueño
+        String CREATE_SLEEP_HABITS_TABLE = "CREATE TABLE " + TABLE_SLEEP_HABITS + "("
+                + COLUMN_SLEEP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + COLUMN_SLEEP_NAME + " TEXT,"
+                + COLUMN_SLEEP_TIME_TO_SLEEP + " TEXT,"
+                + COLUMN_SLEEP_TIME_TO_WAKE + " TEXT,"
+                + COLUMN_SLEEP_FREQUENCY + " TEXT,"
+                + COLUMN_SLEEP_TYPE + " TEXT,"
+                + COLUMN_SLEEP_SPECIFIC_TYPE + " TEXT,"
+                + COLUMN_SLEEP_TERM + " TEXT" + ")";
+        db.execSQL(CREATE_SLEEP_HABITS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Eliminar las tablas si existen y crearlas de nuevo
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_HABITS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SLEEP_HABITS);
         onCreate(db);
     }
+
+    // CRUD de usuarios
 
     // Método para registrar un usuario
     public boolean registerUser(String nombre, String email, String password) {
@@ -71,7 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         long result = db.insert(TABLE_USERS, null, values);
         db.close();
-        return result != -1; // Retorna true si se insertó correctamente
+        return result != -1;
     }
 
     // Método para verificar las credenciales del usuario
@@ -87,49 +91,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return exists;
     }
 
-    // Método para agregar un nuevo hábito
-    public boolean addHabit(String habitName, String frequency, String type, String specificType, String term) {
+    // CRUD de hábitos de sueño
+
+    // Método para agregar un hábito de sueño
+    public boolean addSleepHabit(String nombreHabito, String horaDormir, String horaDespertar, String frecuencia,
+                                 String tipoHabito, String tipoEspecifico, String plazo) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_HABIT_NAME, habitName);
-        values.put(COLUMN_HABIT_FREQUENCY, frequency);
-        values.put(COLUMN_HABIT_TYPE, type);
-        values.put(COLUMN_HABIT_SPECIFIC_TYPE, specificType);
-        values.put(COLUMN_HABIT_TERM, term);
+        values.put(COLUMN_SLEEP_NAME, nombreHabito);
+        values.put(COLUMN_SLEEP_TIME_TO_SLEEP, horaDormir);
+        values.put(COLUMN_SLEEP_TIME_TO_WAKE, horaDespertar);
+        values.put(COLUMN_SLEEP_FREQUENCY, frecuencia);
+        values.put(COLUMN_SLEEP_TYPE, tipoHabito);
+        values.put(COLUMN_SLEEP_SPECIFIC_TYPE, tipoEspecifico);
+        values.put(COLUMN_SLEEP_TERM, plazo);
 
-        long result = db.insert(TABLE_HABITS, null, values);
+        long result = db.insert(TABLE_SLEEP_HABITS, null, values);
         db.close();
-        return result != -1; // Retorna true si se insertó correctamente
+        return result != -1;
     }
 
-    // Método para obtener todos los hábitos
-    public Cursor getAllHabits() {
+    // Método para obtener todos los hábitos de sueño
+    public Cursor getAllSleepHabits() {
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT * FROM " + TABLE_HABITS, null);
+        return db.rawQuery("SELECT * FROM " + TABLE_SLEEP_HABITS, null);
     }
 
-    public boolean deleteHabit(String habitName) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        int result = db.delete(TABLE_HABITS, COLUMN_HABIT_NAME + " = ?", new String[]{habitName});
-        db.close();
-        return result > 0; // Retorna true si se eliminó correctamente
+    // Método para obtener un hábito de sueño por su ID
+    public Cursor getSleepHabitById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.query(TABLE_SLEEP_HABITS, null, COLUMN_SLEEP_ID + " = ?", new String[]{String.valueOf(id)},
+                null, null, null);
     }
 
-    public boolean actualizarHabit(int id, String nuevoNombre, String nuevaFrecuencia) {
+    // Método para actualizar un hábito de sueño
+    public boolean updateSleepHabit(int id, String nuevoNombre, String nuevaHoraDormir, String nuevaHoraDespertar,
+                                    String nuevaFrecuencia, String nuevoTipoHabito, String nuevoTipoEspecifico, String nuevoPlazo) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("nombre_habito", nuevoNombre);
-        contentValues.put("frecuencia_habito", nuevaFrecuencia);
+        contentValues.put(COLUMN_SLEEP_NAME, nuevoNombre);
+        contentValues.put(COLUMN_SLEEP_TIME_TO_SLEEP, nuevaHoraDormir);
+        contentValues.put(COLUMN_SLEEP_TIME_TO_WAKE, nuevaHoraDespertar);
+        contentValues.put(COLUMN_SLEEP_FREQUENCY, nuevaFrecuencia);
+        contentValues.put(COLUMN_SLEEP_TYPE, nuevoTipoHabito);
+        contentValues.put(COLUMN_SLEEP_SPECIFIC_TYPE, nuevoTipoEspecifico);
+        contentValues.put(COLUMN_SLEEP_TERM, nuevoPlazo);
 
-        // Actualiza el registro en la base de datos
-        return db.update("habitos", contentValues, "id_habito = ?", new String[]{String.valueOf(id)}) > 0;
+        return db.update(TABLE_SLEEP_HABITS, contentValues, COLUMN_SLEEP_ID + " = ?", new String[]{String.valueOf(id)}) > 0;
     }
-    // Método para obtener un hábito por su ID
-    public Cursor getHabitById(int id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        return db.query(TABLE_HABITS, null, COLUMN_HABIT_ID + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+
+    // Método para eliminar un hábito de sueño
+    public boolean deleteSleepHabit(String habitName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_SLEEP_HABITS, COLUMN_SLEEP_NAME + " = ?", new String[]{habitName});
+        db.close();
+        return result > 0;
     }
-
-
 }
-

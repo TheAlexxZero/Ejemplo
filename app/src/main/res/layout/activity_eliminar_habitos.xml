@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#2A0A3A">
+    android:padding="24dp"
+    android:background="#1A1A2E">
 
     <TextView
         android:id="@+id/tituloEliminarHabito"
@@ -13,8 +12,9 @@
         android:text="Eliminar Hábito"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#BB86FC"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/textViewSeleccionarHabito"
@@ -22,15 +22,16 @@
         android:layout_height="wrap_content"
         android:text="Selecciona el Hábito a Eliminar"
         android:textSize="18sp"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#BB86FC"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"/>
 
     <Spinner
         android:id="@+id/spinnerEliminarHabito"
-        android:layout_width="match_parent"
-        android:layout_height="211dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/synthwave"
+        android:layout_width="373dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -38,6 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Eliminar Hábito"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:backgroundTint="#F44336"
-        android:textColor="#FFFFFF"/>
+        android:textColor="#FFFFFF"
+        android:padding="16dp"/>
+
 </LinearLayout>

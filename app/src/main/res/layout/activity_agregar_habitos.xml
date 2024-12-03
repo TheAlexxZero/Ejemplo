@@ -1,115 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#2A0A3A">
+    android:background="#1A1A2E"
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/tituloNuevoHabito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Crear Nuevo Hábito"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="16dp"/>
-
-    <EditText
-        android:id="@+id/editTextNombreHabito"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Nombre del Hábito"
-        android:padding="12dp"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/textViewFrecuencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Frecuencia"
-        android:textSize="18sp"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="8dp"/>
-
-    <Spinner
-        android:id="@+id/spinnerFrecuencia"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/textViewTipoHabito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo de Hábito"
-        android:textSize="18sp"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="8dp"/>
-
-    <Spinner
-        android:id="@+id/spinnerTipoHabito"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/textViewTipoEspecifico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Especifica tu hábito"
-        android:textSize="18sp"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="8dp"/>
-
-    <EditText
-        android:id="@+id/editTextTipoEspecifico"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ej: Hacer ejercicio todos los días"
-        android:padding="12dp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewPlazo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Plazo"
-        android:textSize="18sp"
-        android:textColor="#FF007F"
-        android:layout_marginBottom="8dp"/>
-
-    <RadioGroup
-        android:id="@+id/radioGroupPlazo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <RadioButton
-            android:id="@+id/radioCortoPlazo"
+        <TextView
+            android:id="@+id/tituloNuevoHabito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Corto Plazo"
-            android:textColor="#FFFFFF"/>
+            android:text="Crear Nuevo Hábito de Sueño"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="24dp" />
 
-        <RadioButton
-            android:id="@+id/radioLargoPlazo"
+        <EditText
+            android:id="@+id/editTextNombreHabito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Hábito"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#BB86FC"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewHoraDormir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Largo Plazo"
-            android:textColor="#FFFFFF"/>
-    </RadioGroup>
+            android:text="Hora de Dormir"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
 
-    <Button
-        android:id="@+id/botonGuardarHabito"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guardar Hábito"
-        android:backgroundTint="#FF007F"
-        android:textColor="#FFFFFF"/>
-</LinearLayout>
+        <EditText
+            android:id="@+id/editTextHoraDormir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 10:00 PM"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#BB86FC"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewHoraDespertar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora de Despertar"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextHoraDespertar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 6:00 AM"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#BB86FC"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewFrecuencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frecuencia"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerFrecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewTipoHabito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Hábito"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoHabito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewTipoEspecifico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Especifica tu hábito"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editTextTipoEspecifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Dormir 8 horas todas las noches"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#BB86FC"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textViewPlazo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plazo"
+            android:textSize="18sp"
+            android:textColor="#BB86FC"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupPlazo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/radioCortoPlazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corto Plazo"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:id="@+id/radioLargoPlazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Largo Plazo"
+                android:textColor="#FFFFFF" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/botonGuardarHabito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Hábito"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="16dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

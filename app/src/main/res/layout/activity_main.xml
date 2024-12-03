@@ -1,39 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1a1a1a"
+    android:background="#1A1A2E"
     tools:ignore="ExtraText">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="270dp"
-        android:layout_height="107dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Bienvenido a Lotus"
-        android:textColor="#FF00FF"
+        android:textColor="#BB86FC"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/motivationalQuoteTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="32dp" /> <!-- Añadido un margen para mejor separación -->
+        android:layout_marginBottom="32dp" />
 
     <TextView
         android:id="@+id/motivationalQuoteTextView"
         android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:text="¡Comienza hoy a construir hábitos saludables y mejora tu bienestar!"
         android:textAlignment="center"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="#BB86FC"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnlogin"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" /> <!-- Añadidas restricciones para centrar -->
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnlogin"
@@ -43,7 +42,10 @@
         app:layout_constraintEnd_toStartOf="@+id/btnSignup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="24dp" /> <!-- Añadidas restricciones y márgenes -->
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
 
     <Button
         android:id="@+id/btnSignup"
@@ -53,6 +55,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnlogin"
-        android:layout_marginBottom="24dp" /> <!-- Añadidas restricciones y márgenes -->
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#03DAC5"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
